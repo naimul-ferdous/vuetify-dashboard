@@ -1,5 +1,8 @@
 <template lang="">
-    <v-breadcrumbs :items="items">
+    <div class="breadcrumb">
+      
+      <h2 class="breadTitle">{{$route.name}}</h2>
+        <v-breadcrumbs :items="items">
     <template v-slot:item="{ item }">
       <v-breadcrumbs-item
         :href="item.href"
@@ -9,6 +12,7 @@
       </v-breadcrumbs-item>
     </template>
   </v-breadcrumbs>
+    </div>
 </template>
 <script>
 export default {
@@ -17,21 +21,30 @@ export default {
       {
         text: "Dashboard",
         disabled: false,
-        href: "breadcrumbs_dashboard",
+        href: "/",
       },
       {
-        text: "Link 1",
-        disabled: false,
-        href: "breadcrumbs_link_1",
-      },
-      {
-        text: "Link 2",
+        text: "Dashboard",
         disabled: true,
-        href: "breadcrumbs_link_2",
+        href: "dashboard",
       },
     ],
   }),
+  methods: {},
+  created() {},
+  computed: {},
 };
 </script>
-<style lang="">
+
+<style scoped>
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.breadTitle {
+  text-transform: capitalize;
+}
 </style>

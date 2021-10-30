@@ -129,9 +129,7 @@ export default {
 };
 </script>
 <style scoped>
-.v-sheet--offset {
-  top: -24px;
-  position: relative;
-  border: 2px solid red;
+.mycontainer {
+  /* border: 1px solid red; */
 }
 </style>

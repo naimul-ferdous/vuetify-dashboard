@@ -4,7 +4,7 @@ import Home from "./components/pages/Home";
 
 export const routes = [
   {
-    name: "home",
+    name: "dashboard",
     path: "/",
     component: Home,
   },
